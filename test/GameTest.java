@@ -12,8 +12,30 @@ class GameTest {
 	}
 
 	@Test
-	void test() {
+	void testzerorollscorezero() {
 		int attendu = 0;
+		int obtenu = game.score() ;
+		assertEquals(attendu,obtenu);
+				
+	}
+	
+	@Test
+	void testvingtrollazero() {
+		int attendu = 0;
+		for (int i = 0 ; i < 20 ; i++) {
+			game.roll(0);
+		}
+		int obtenu = game.score() ;
+		assertEquals(attendu,obtenu);
+				
+	}
+	
+	@Test
+	void testvingtrollaun() {
+		int attendu = 20;
+		for (int i = 0 ; i < 20 ; i++) {
+			game.roll(1);
+		}
 		int obtenu = game.score() ;
 		assertEquals(attendu,obtenu);
 				
