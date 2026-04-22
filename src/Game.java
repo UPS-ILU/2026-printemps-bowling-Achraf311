@@ -1,12 +1,15 @@
 
 public class Game {
 	
+	private int tour = 0;
+	
 	public Game() {
 		
 	}
 	
 	
 	public String next() {
-		return "1";
+		tour++;
+		return Integer.toString(tour);
 	}
 }

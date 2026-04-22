@@ -12,9 +12,18 @@ class GameTest {
 	}
 
 	@Test
-	void testzerorollscorezero() {
+	void testCasrepondUn() {
 		String attendu = "1";
 	    String obtenu = game.next() ;
+		assertEquals(attendu,obtenu);
+				
+	}
+	
+	@Test
+	void testCasrepondDeux() {
+		String attendu = "2";
+		game.next();
+	    String obtenu = game.next();
 		assertEquals(attendu,obtenu);
 				
 	}
